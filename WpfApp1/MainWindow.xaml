@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="CareConnect Debugger" 
-        Height="500" 
+        Height="550" 
         Width="800"
         WindowStartupLocation="CenterScreen"
         >
@@ -25,14 +25,16 @@
         <DockPanel Grid.Row="0" Margin="0 0 0 10" Grid.ColumnSpan="2">
             <StackPanel Orientation="Vertical" Height="Auto" >
                 <TextBlock Text="CareConnect Debugger"
-                       FontSize="20"
+                       FontSize="16"
                        FontWeight="Bold"
                        VerticalAlignment="Center"/>
 
-                <TextBlock Text="Monitor and test HL7 message communication"
+                <TextBlock 
+                    Text="Monitor and test HL7 message communication"
                     FontSize="10"
                     FontWeight="Medium"
                     VerticalAlignment="Center"
+                    Foreground="#B1B0B5"
                  />
             </StackPanel>
 
@@ -61,11 +63,28 @@
             <!-- Input Message -->
             <Border Grid.Column="0" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="0 0 5 0">
                 <StackPanel>
-                    <TextBlock Text="Input Message" FontWeight="Bold" Margin="0 0 0 10"/>
-                    <TextBlock Text="Message Content"/>
-                    <TextBox x:Name="InputTextBox" Height="120" TextWrapping="Wrap" AcceptsReturn="True"
-                 Margin="0 5 0 10"                              
-                 />
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Ellipse Width="10" Height="10" Fill="Blue" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                        <TextBlock Text="Input Message" FontWeight="Bold" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <TextBlock Text="Message Content" FontWeight="Bold" Margin="0 15 0 0" />
+                    <Border 
+                        CornerRadius="5" 
+                        BorderThickness="2"
+                        BorderBrush="#F3F3F5"
+                        Padding="2"
+                        Margin="0 5 0 10"
+                        Background="#F3F3F5"
+                     >
+                        <TextBox 
+                            x:Name="InputTextBox" 
+                            Height="120" 
+                            TextWrapping="Wrap" 
+                            AcceptsReturn="True"
+                            BorderThickness="0"
+                            Background="Transparent"
+                        />
+                    </Border>
                     <Button Content="Send Message" Height="40" Background="Black" Foreground="White"/>
                 </StackPanel>
             </Border>
@@ -73,22 +92,58 @@
             <!-- Received Message -->
             <Border Grid.Column="1" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="5 0 0 0">
                 <StackPanel>
-                    <TextBlock Text="Received Message" FontWeight="Bold" Margin="0 0 0 10"/>
-                    <TextBlock Text="Response Content"/>
-                    <TextBox Height="120" TextWrapping="Wrap" AcceptsReturn="True"
-                             Margin="0 5 0 10"
-                    />
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Ellipse Width="10" Height="10" Fill="Green" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                        <TextBlock Text="Received Message" FontWeight="Bold" VerticalAlignment="Center" />
+                    </StackPanel>
+                    
+                    <TextBlock Text="Response Content" FontWeight="Bold" Margin="0 15 0 0" />
+                    <Border 
+                        CornerRadius="5" 
+                        BorderThickness="2"
+                        BorderBrush="#F3F3F5"
+                        Padding="2"
+                        Margin="0 5 0 10"
+                        Background="#F3F3F5"
+                     >
+                        <TextBox 
+                            Height="120" 
+                            TextWrapping="Wrap" 
+                            AcceptsReturn="True"
+                            Background="Transparent"
+                            BorderThickness="0"
+                        />
+                    </Border>
                 </StackPanel>
             </Border>
         </Grid>
 
         <Border Grid.Row="2" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Grid.ColumnSpan="2" >
             <StackPanel>
-                <TextBlock Text="Diagnostic Logs" FontWeight="Bold" Foreground="DarkOrange" Margin="0 0 0 10"/>
-                <TextBlock Text="System Logs" />
-                <TextBox Height="80" TextWrapping="Wrap" AcceptsReturn="True"
-                         Text="Application started&#x0a;Ready for diagnostics..."
-                         IsReadOnly="True"/>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <Ellipse Width="10" Height="10" Fill="DarkOrange" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                    <TextBlock Text="Diagnostic Logs" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <TextBlock Text="System Logs" FontWeight="Bold" Margin="0 0 0 5" />
+                <Border 
+                    CornerRadius="5" 
+                    BorderThickness="2"
+                    BorderBrush="#F3F3F5"
+                    Padding="2"
+                    Margin="0 5 0 10"
+                    Background="#F3F3F5"
+                 >
+                    <TextBox 
+                        Height="80" 
+                        TextWrapping="Wrap" 
+                        AcceptsReturn="True"
+                        Text="Application started&#x0a;Ready for diagnostics..."
+                        IsReadOnly="True"
+                        Background="Transparent"
+                        BorderThickness="0"
+                    />
+                </Border>
             </StackPanel>
         </Border>
 
