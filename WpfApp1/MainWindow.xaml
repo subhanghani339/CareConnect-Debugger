@@ -63,10 +63,33 @@
             <!-- Input Message -->
             <Border Grid.Column="0" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="0 0 5 0">
                 <StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                        <Ellipse Width="5" Height="5" Fill="Blue" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                        <TextBlock Text="Input Message" FontWeight="Bold" VerticalAlignment="Center" />
-                    </StackPanel>
+                    <Grid Margin="0 0 0 10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Left side (Dot + Text) -->
+                        <StackPanel Orientation="Horizontal" Grid.Column="0" VerticalAlignment="Center">
+                            <Ellipse Width="5" Height="5" Fill="Blue" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                            <TextBlock Text="Input Message" FontWeight="Bold" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
+                            <!-- Copy Button -->
+                            <Button Width="24" Height="24" Background="Transparent" BorderThickness="0"
+                                ToolTip="Copy" Click="CopyButton_Click" Margin="0,0,5,0">
+                                <Image Source="/Assets/copy.png" Width="16" Height="16"/>
+                            </Button>
+
+                            <!-- Delete Button -->
+                            <Button Width="24" Height="24" Background="Transparent" BorderThickness="0"
+                ToolTip="Delete" Click="DeleteButton_Click">
+                                <Image Source="/Assets/delete.png" Width="16" Height="16" />
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
                     <TextBlock Text="Message Content" FontWeight="Bold" Margin="0 15 0 0" />
                     <Border 
                         CornerRadius="5" 
@@ -92,11 +115,33 @@
             <!-- Received Message -->
             <Border Grid.Column="1" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="5 0 0 0">
                 <StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                        <Ellipse Width="5" Height="5" Fill="Green" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                        <TextBlock Text="Received Message" FontWeight="Bold" VerticalAlignment="Center" />
-                    </StackPanel>
-                    
+                    <Grid Margin="0 0 0 10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Left side (Dot + Text) -->
+                        <StackPanel Orientation="Horizontal" Grid.Column="0" VerticalAlignment="Center">
+                            <Ellipse Width="5" Height="5" Fill="Green" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                            <TextBlock Text="Received Message" FontWeight="Bold" VerticalAlignment="Center" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
+                            <!-- Copy Button -->
+                            <Button Width="24" Height="24" Background="Transparent" BorderThickness="0"
+                                ToolTip="Copy" Click="CopyButton_Click" Margin="0,0,5,0">
+                                <Image Source="/Assets/copy.png" Width="16" Height="16"/>
+                            </Button>
+
+                            <!-- Delete Button -->
+                            <Button Width="24" Height="24" Background="Transparent" BorderThickness="0"
+                                ToolTip="Delete" Click="DeleteButton_Click">
+                                <Image Source="/Assets/delete.png" Width="16" Height="16" />
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
                     <TextBlock Text="Response Content" FontWeight="Bold" Margin="0 15 0 0" />
                     <Border 
                         CornerRadius="5" 
@@ -120,10 +165,31 @@
 
         <Border Grid.Row="2" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Grid.ColumnSpan="2" >
             <StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <Ellipse Width="5" Height="5" Fill="DarkOrange" VerticalAlignment="Center" Margin="0 0 5 0"/>
-                    <TextBlock Text="Diagnostic Logs" FontWeight="Bold" VerticalAlignment="Center"/>
-                </StackPanel>
+                <Grid Margin="0 0 0 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" VerticalAlignment="Center">
+                        <Ellipse Width="5" Height="5" Fill="DarkOrange" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                        <TextBlock Text="Diagnostic Logs" FontWeight="Bold" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
+                        <!-- Copy Button -->
+                        <Button Width="24" Height="24" Background="Transparent" BorderThickness="0"
+                            ToolTip="Copy" Click="CopyButton_Click" Margin="0,0,5,0">
+                            <Image Source="/Assets/copy.png" Width="16" Height="16"/>
+                        </Button>
+
+                        <!-- Delete Button -->
+                        <Button Width="24" Height="24" Background="Transparent" BorderThickness="0"
+                            ToolTip="Delete" Click="DeleteButton_Click">
+                            <Image Source="/Assets/delete.png" Width="16" Height="16" />
+                        </Button>
+                    </StackPanel>
+                </Grid>
 
                 <TextBlock Text="System Logs" FontWeight="Bold" Margin="0 0 0 5" />
                 <Border 

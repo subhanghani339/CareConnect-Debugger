@@ -23,5 +23,19 @@ namespace WpfApp1
         {
 
         }
+
+        private void CopyButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Copy button clicked!");
+            // Example: Copy text from InputTextBox
+            // Clipboard.SetText(InputTextBox.Text);
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Delete button clicked!");
+            // Example: Clear text from InputTextBox
+            // InputTextBox.Clear();
+        }
     }
 }
