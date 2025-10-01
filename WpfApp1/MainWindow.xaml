@@ -1,0 +1,96 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="CareConnect Debugger" 
+        Height="500" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Margin="0 0 0 10" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Vertical" Height="Auto" >
+                <TextBlock Text="CareConnect Debugger"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"/>
+
+                <TextBlock Text="Monitor and test HL7 message communication"
+                    FontSize="10"
+                    FontWeight="Medium"
+                    VerticalAlignment="Center"
+                 />
+            </StackPanel>
+
+            <Button 
+                Content="Settings"
+                HorizontalAlignment="Right"
+                Margin="10 0 0 0"
+                Background="white"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                Padding="10 5"
+                />
+        </DockPanel>
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Input Message -->
+            <Border Grid.Column="0" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="0 0 5 0">
+                <StackPanel>
+                    <TextBlock Text="Input Message" FontWeight="Bold" Margin="0 0 0 10"/>
+                    <TextBlock Text="Message Content"/>
+                    <TextBox x:Name="InputTextBox" Height="120" TextWrapping="Wrap" AcceptsReturn="True"
+                 Margin="0 5 0 10"                              
+                 />
+                    <Button Content="Send Message" Height="40" Background="Black" Foreground="White"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Received Message -->
+            <Border Grid.Column="1" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="5 0 0 0">
+                <StackPanel>
+                    <TextBlock Text="Received Message" FontWeight="Bold" Margin="0 0 0 10"/>
+                    <TextBlock Text="Response Content"/>
+                    <TextBox Height="120" TextWrapping="Wrap" AcceptsReturn="True"
+                             Margin="0 5 0 10"
+                    />
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Grid.ColumnSpan="2" >
+            <StackPanel>
+                <TextBlock Text="Diagnostic Logs" FontWeight="Bold" Foreground="DarkOrange" Margin="0 0 0 10"/>
+                <TextBlock Text="System Logs" />
+                <TextBox Height="80" TextWrapping="Wrap" AcceptsReturn="True"
+                         Text="Application started&#x0a;Ready for diagnostics..."
+                         IsReadOnly="True"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
