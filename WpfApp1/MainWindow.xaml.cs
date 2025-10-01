@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Windows;
 
 namespace WpfApp1
 {
@@ -37,5 +38,15 @@ namespace WpfApp1
             // Example: Clear text from InputTextBox
             // InputTextBox.Clear();
         }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var settingsWindow = new SettingsWindow
+            {
+                Owner = this
+            };
+            settingsWindow.ShowDialog();
+        }
+
     }
 }

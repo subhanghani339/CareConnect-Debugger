@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="CareConnect Debugger" 
-        Height="550" 
+        Height="570"
         Width="800"
         WindowStartupLocation="CenterScreen"
         >
@@ -46,7 +46,8 @@
                 BorderBrush="Gray"
                 BorderThickness="1"
                 Padding="10 5"
-                />
+                Click="SettingsButton_Click"
+             />
         </DockPanel>
 
         <Grid Grid.Row="1" Grid.ColumnSpan="2">
