@@ -64,7 +64,7 @@
             <Border Grid.Column="0" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="0 0 5 0">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                        <Ellipse Width="10" Height="10" Fill="Blue" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                        <Ellipse Width="5" Height="5" Fill="Blue" VerticalAlignment="Center" Margin="0 0 5 0"/>
                         <TextBlock Text="Input Message" FontWeight="Bold" VerticalAlignment="Center" />
                     </StackPanel>
                     <TextBlock Text="Message Content" FontWeight="Bold" Margin="0 15 0 0" />
@@ -93,7 +93,7 @@
             <Border Grid.Column="1" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Margin="5 0 0 0">
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                        <Ellipse Width="10" Height="10" Fill="Green" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                        <Ellipse Width="5" Height="5" Fill="Green" VerticalAlignment="Center" Margin="0 0 5 0"/>
                         <TextBlock Text="Received Message" FontWeight="Bold" VerticalAlignment="Center" />
                     </StackPanel>
                     
@@ -121,7 +121,7 @@
         <Border Grid.Row="2" BorderBrush="#ddd" BorderThickness="1" CornerRadius="8" Padding="10" Grid.ColumnSpan="2" >
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <Ellipse Width="10" Height="10" Fill="DarkOrange" VerticalAlignment="Center" Margin="0 0 5 0"/>
+                    <Ellipse Width="5" Height="5" Fill="DarkOrange" VerticalAlignment="Center" Margin="0 0 5 0"/>
                     <TextBlock Text="Diagnostic Logs" FontWeight="Bold" VerticalAlignment="Center"/>
                 </StackPanel>
 
